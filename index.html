@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather-App</h1>
+        <div class="tab-container">
+            <div class="tab"data-user-weather>YOUR LOCATION</div>
+            <div class="tab"data-search-weather>SEARCH LOCATION</div>
+        </div>
+        <class="weather-container">
+            <!--GRANT LOCATION CONTAINER-->
+            <div class="grant-location-container">
+                <img src="./assets/permission.png"height="80" width="80" loading="lazy">
+                <h4>GRANT LOCATION ACCESS</h4>
+                <p>ALLOW ACCESS TO GRANT YOUR LOCATION</p>
+                <button class="btn" data-grant-access>GRANT-ACCESS</button>
+            </div>
+            <!--SEARCH WEATHER FORM-->
+            
+                <form class="search-container" data-search-form>
+                    <input placeholder="search your city" data-search-input></input>
+                    <button class="btn">
+                        <img src="./assets/search.png" height="20" width="20" loading="lazy">
+                    </button>
+                </form>
+
+            <!--LOADING SCREEN CONTAINER-->
+            <div class="loading-container">
+                <img src="./assets/loading1.png" height="150" width="150" loading="lazy">
+                <p>LOADING</p>
+            </div>
+            <!--SHOW WEATHER INFO-->
+            <div class="weather-info-container">
+                <div class="name">
+                    <p data-city-name></p>
+                    <img data-city-flag/>
+                </div>
+                <p data-image-description></p>
+                <img data-image-url/>
+                <p data-temprature></p>
+                <div class="parameter-container">
+                    <!--card 1-->
+                    <div class="parameter">
+                     <img src="/assets/wind.png" height="20" width="20" loading="lazy">
+                     <p>WIND-SPEED</p>
+                     <p data-wind-speed></p>
+                    </div>
+                    <!--card 2-->
+                    <div>
+                        <img src="./assets/humedity.png"height="20" width="20" loading="lazy">
+                     <p>HUMEDITY</p>
+                     <p data-humedity></p>
+                    </div>
+                    <!--card 3-->
+                    <div>
+                        <img src="/assets/cloud.jpg"height="20" width="20" loading="lazy">
+                     <p>CLOUD</p>
+                     <p data-wind-speed></p>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>    
+        
+    
+</body>
+</html>
