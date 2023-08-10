@@ -1,4 +1,217 @@
-.tab.current-tab{
+*,*::before,*::after
+{   margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-    background-color:grey;
+:root
+{
+--colorDark1:#112d4e;
+--colorDark2:#3f72af;
+--colorlight1:#dbe2ef;
+--colorlight2:#f9f7f7;
+}
+.tab.current-tab
+{
+    background-color: rgba(244, 234, 234, 0.205);
+    border-radius: 5px;
+}
+
+.wrapper
+{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-image: linear-gradient(to bottom right,#667eea, #764ba2)
+}
+h1{
+text-align: center;
+padding-top: 10px;
+}
+.tab-container
+{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.tab
+{
+   cursor: pointer;
+   font-size: 0.875rem;
+   letter-spacing: 1.75px;
+   padding: 5px 8px;
+}
+.weather-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn
+{
+    cursor: pointer;
+    color: white;
+    background-color: var(--colorDark2);
+    padding:5px;
+    border-radius: 5px;
+}
+.sub-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.grant-location-container
+{
+   display: none;
+}
+.grant-location-container.active
+{
+   display: flex;
+}
+.grant-location-container img
+{
+margin-bottom: -15px;
+}
+.grant-location-container p:first-of-type
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.grant-location-container p:last-of-type
+{
+    font-size: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/*LOADING CONTAINER*/
+.loading-container
+{
+    display: none;
+}
+.loading-container.active
+{
+    display: flex;
+}
+.loading-container p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+/*WEATHER INFO CONTAINER*/
+.user-info-container
+{
+    display: none;
+}
+.user-info-container.active
+{
+    display: flex;
+}
+.user-info-container img[data-weatherIcon]
+{
+    height: 90px;
+    width:90px;
+    margin:-15px 0px;
+}
+.user-info-container p[data-temp]
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.user-info-container p[data-weatherDesc]
+{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.name
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.name p
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.name img
+{
+height: 18px;
+width: 25px;
+margin:7px 10px;
+}
+
+.parameter-container
+{
+    display: flex;
+    margin-top: 10px;
+    width: 50vw;
+    
+}
+.parameter
+{
+    width: 30%;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(223, 202, 202, 0.903);
+    border-radius: 5px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* FORM CONTAINER */
+.form-container
+{
+
+
+    display: none;
+    margin:10px 10px;
+    gap: 10px;
+    color: black;
+
+}
+.form-container.active
+{
+
+    display: flex;
+}
+.form-container input
+{
+    all:unset;
+    width: 30vw;
+    height: 1.0rem;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:rgba(252, 252, 252, 0.784);
+}
+.btn1
+{
+   border: 1px solid black; 
+   width: 5vw;
+   height: 6vh;
+   border-radius: 100px;
+}
+
+.form-container input:focus
+{
+    outline: 2px solid rgba(143, 238, 160, 0.648);
 }
